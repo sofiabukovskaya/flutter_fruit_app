@@ -7,7 +7,7 @@ class FruitDao {
 
   final _fruitStore = intMapStoreFactory.store(FRUIT_NAME);
 
-  Future<Database> get _db async => await AppDatabase().instance.database;
+  Future<Database> get _db async => await AppDatabase().database;
 
   Future insert(Fruit fruit) async {
     await _fruitStore.add(await _db, fruit.toMap());
