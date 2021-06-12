@@ -5,6 +5,7 @@ import 'package:sembast/sembast.dart';
 import 'package:sembast/sembast_io.dart';
 
 class AppDatabase {
+  AppDatabase() : super();
   final AppDatabase _singleton = AppDatabase._();
    AppDatabase get instance => _singleton;
    Completer<Database>? _dbOpenCompleter;
